@@ -1,0 +1,5 @@
+server: 'https://idmeinc.atlassian.net/rest/'
+username: "USERNAME"
+password: "PASSWORD"
+board_id: "01"
+excluded_sprints: ["01", "02"]
