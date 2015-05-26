@@ -11,7 +11,7 @@ import yaml
 
 ### CONFIGURATION ###
 #TODO accept the config.yml from the command line
-config_file = path.join(path.dirname(path.realpath(__file__)), 'config/config_core.yml')
+config_file = path.join(path.dirname(path.realpath(__file__)), 'config/config_hc.yml')
 if path.exists(config_file):
 	config = yaml.load(open(config_file, 'r'))
 else:
