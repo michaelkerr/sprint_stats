@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """ Sprint stats test script """
 
-from IPython import embed
+# from IPython import embed
 import json
 from os import path
 from pprint import pprint
