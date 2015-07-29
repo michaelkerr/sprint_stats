@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """ Sprint stats test script """
 
-# from IPython import embed
+from IPython import embed
 import json
 from os import path
 from pprint import pprint
@@ -11,6 +11,7 @@ import yaml
 
 ### CONFIGURATION ###
 #TODO accept the config.yml from the command line
+# config_file = path.join(path.dirname(path.realpath(__file__)), 'config/config_core.yml')
 config_file = path.join(path.dirname(path.realpath(__file__)), 'config/config_hc.yml')
 if path.exists(config_file):
 	config = yaml.load(open(config_file, 'r'))
@@ -31,7 +32,7 @@ min_sprint = 0
 board = config['board_id']
 
 ### METHODS ###
-#TODO EXTRACT
+#TODO EXTRACT TO NEW FILE
 def extract_sprint_data(url, creds, board, sprint):
 	data_temp = {}
 	url = url + '/rapid/charts/velocity'
@@ -148,3 +149,5 @@ if __name__ == '__main__':
 		sprint_info[sprint] = {'data': sprint_data, 'stats': sprint_stats}
 
 	pprint(sprint_info)
+
+	#TODO SAVE DATA TO FILE
